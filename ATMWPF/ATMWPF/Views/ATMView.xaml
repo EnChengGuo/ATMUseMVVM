@@ -1,0 +1,31 @@
+﻿<Window x:Class="ATMWPF.Views.ATMView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATMWPF.Views"
+        mc:Ignorable="d" FontSize="18"
+        Title="ATMView" Height="450" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!---Col 0-->
+        <ContentControl Grid.Column="0" x:Name="ActiveItem"/>
+        <!---Col 1 -->
+        <Button x:Name="InsetTimCard" Grid.Column="1" Height="150"
+                IsEnabled="{Binding CarNotInside}">插入Tim的提款卡</Button>
+        <!---Col 2 -->
+        <Button x:Name="InsetZoyCard" Grid.Column="2" Height="150"
+                IsEnabled="{Binding CarNotInside}">插入Zoy的提款卡</Button>
+        <!---Col 3 -->
+        <Button x:Name="InsetIanCard" Grid.Column="3" Height="150"
+                IsEnabled="{Binding CarNotInside}">插入Ian的提款卡</Button>
+    </Grid>
+    
+    
+</Window>
